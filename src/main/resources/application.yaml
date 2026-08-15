@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: customer-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/composable
+    username: root
+    password: 1234
+  component:
+    scan: com.aryan
+
+server:
+  port: 8080
+
+rest:
+  server:
+    port: 8085
+  automation: true
+
+yaml:
+  rest:
+    automation: classpath:/rest.yaml
+  flow:
+    automation: classpath:/flows.yaml
+
+web:
+  component:
+    scan: com.aryan.functions
